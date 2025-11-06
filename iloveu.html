@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Surprise</title>
+  <style>
+    :root{
+      --bg1:#6a11e7; /* noche */
+      --bg2:#0f0b4b; /* rubor */
+      --accent:#ff4d6d;
+      --gold:#f2c94c;
+      font-family: 'Georgia', 'Times New Roman', serif;
+    }
+    html,body{height:100%;margin:0}
+    body{
+      background: radial-gradient(circle at 10% 10%, var(--bg2), var(--bg1));
+      color:#fff; display:flex; align-items:center; justify-content:center; padding:140px;
+    }
+    .flower-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));padding:140px;border-radius:16px;display:flex;align-items:center;gap:16px;box-shadow:0 10px 40px rgba(0,0,0,0.6);backdrop-filter: blur(10px)}
+    .flower-svg{width:120px;height:120px;flex:0 0 120px}
+    .megustas{font-size:3rem;color:var(--accent);font-weight:1000;text-shadow:0 8px 32px rgba(0,0,0,0.5)}
+    .megustas small{display:block;font-size:1rem;color:#ffdfe6;font-weight:800}
+
+    .heart{transform-origin:center;animation:beat 1s infinite}
+    @keyframes beat{0%{transform:scale(1)}40%{transform:scale(1.18)}60%{transform:scale(0.92)}100%{transform:scale(1)}}
+
+    @media (max-width:520px){.megustas{font-size:1.6rem}.flower-svg{width:100px;height:100px}}
+  </style>
+</head>
+<body>
+  <div class="flower-card" role="img" aria-label="Florcita">
+    <svg class="flower-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="g1" cx="30%" cy="30%">
+          <stop offset="0%" stop-color="#fff1" />
+          <stop offset="100%" stop-color="#ff4d6d" />
+        </radialGradient>
+      </defs>
+      <rect x="58" y="52" width="4" height="48" rx="2" fill="#2b5a2b" />
+      <path d="M62 72 C78 74, 86 60, 70 58" fill="#2b5a2b" opacity="0.95" />
+      <path d="M58 72 C42 74, 34 60, 50 58" fill="#2b5a2b" opacity="0.95" />
+      <circle cx="60" cy="36" r="10" fill="#f2c94c" />
+      <g fill="url(#g1)" stroke="#b02b4b" stroke-width="0.6">
+        <ellipse cx="60" cy="18" rx="14" ry="10" transform="rotate(-8 60 18)" />
+        <ellipse cx="80" cy="36" rx="14" ry="10" transform="rotate(25 80 36)" />
+        <ellipse cx="60" cy="54" rx="14" ry="10" transform="rotate(180 60 54)" />
+        <ellipse cx="40" cy="36" rx="14" ry="10" transform="rotate(-25 40 36)" />
+      </g>
+      <!-- Corazones pequeños y con forma real -->
+<g class="heart" fill="#ff4d6d">
+  <path d="M88 20
+           C88 17, 90 15, 92 15
+           C94 15, 96 17, 96 20
+           A4 4 0 0 1 92 26
+           A4 4 0 0 1 88 20Z" />
+</g>
+<g class="heart" style="animation-delay:0.3s" fill="#ff7b9a" transform="translate(6,16) scale(0.9)">
+  <path d="M88 20
+           C88 17, 90 15, 92 15
+           C94 15, 96 17, 96 20
+           A4 4 0 0 1 92 26
+           A4 4 0 0 1 88 20Z" />
+</g>
+
+    </svg>
+    <div>
+      <div class="megustas">Me gustas <small>— Majo</small></div>
+    </div>
+  </div>
+</body>
+</html>
